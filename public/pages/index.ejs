@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>gcol</title>
+</head>
+
+<body>
+
+    <form class="forms" action="/getDatas" method="post">
+        <h1 class="preview"></h1>
+
+        <div class="sec1 sec">
+            <select class="champ" name="chif" id="#">
+                <option value="76">76</option>
+                <option value="74">74</option>
+                <option value="60">60</option>
+                <option value="77">77</option>
+                <option value="66">66</option>
+            </select>
+
+            <input class="cpt" name="quant" value="1" type="number" placeholder="quantiter">
+
+            <select class="champ" name="sep" id="#">
+                <option value=" ">Espace</option>
+                <option value=",">Virgule</option>
+                <option value="_">underscore</option>
+                <option value="">aucun</option>
+                <option value="-">tiret</option>
+            </select>
+        </div>
+
+        <div class="sec2 sec">
+            <div class="check">
+                <label for="ind">Indicatif</label>
+                <input class="champ" name="ind" checked type="checkbox" id="ind">
+            </div>
+            <div class="check">
+                <label for="zero">zero</label>
+                <input checked class="champ" name="zero" type="checkbox" id="zero">
+            </div>
+        </div>
+
+        <div class="btn-submit">
+            <input id="button" type="submit" value="gernere">
+        </div>
+    </form>
+    <script src="../js/main.js"></script>
+</body>
+
+</html>
