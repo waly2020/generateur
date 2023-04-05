@@ -3,7 +3,7 @@ const routes = express.Router();
 const createCsvWriter = require('csv-writer').createObjectCsvWriter;
 
 const csvWriter = createCsvWriter({
-    path: 'public/cvs/numero.csv',
+    path: './public/cvs/numero.csv',
     header: [
         { id: 'id', title: 'ID' },
         { id: 'numero', title: 'numero' }
