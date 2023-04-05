@@ -29,7 +29,7 @@ routes.post("/getDatas", (req, res) => {
     csvWriter.writeRecords(tab)       // returns a promise
         .then(() => {
             console.log('...Done');
-            // console.log("datas\n", tab);
+            console.log("datas\n", tab);
             res.render("pages/succes", { datas: tab });
         });
 })
