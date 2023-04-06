@@ -19,9 +19,9 @@
         <h1 class="preview"></h1>
 
         <div class="sec1 sec">
-            <div class="input">
+            <div class="input select">
                 <div class="icone">
-                    <i class="bi bi-info"></i>
+                    <i class="bi bi-telephone"></i>
                 </div>
                 <select class="champ" name="chif" id="#">
                     <option value="76">76</option>
@@ -32,21 +32,31 @@
                 </select>
             </div>
 
-            <input class="cpt" name="quant" value="1" type="number" placeholder="quantiter">
+            <div class="input">
+                <div class="icone">
+                    <i class="bi bi-list-columns-reverse"></i>
+                </div>
+                <input class="cpt" name="quant" value="1" type="number" placeholder="quantiter">
+            </div>
 
-            <select class="champ" name="sep" id="#">
-                <option value=" ">Espace</option>
-                <option value=",">Virgule</option>
-                <option value="_">underscore</option>
-                <option value="">aucun</option>
-                <option value="-">tiret</option>
-            </select>
+            <div class="input select">
+                <div class="icone">
+                    <i class="bi bi-pencil"></i>
+                </div>
+                <select class="champ" name="sep" id="#">
+                    <option value=" ">Espace</option>
+                    <option value=",">Virgule</option>
+                    <option value="_">underscore</option>
+                    <option value="">aucun</option>
+                    <option value="-">tiret</option>
+                </select>
+            </div>
         </div>
 
         <div class="sec2 sec">
             <div class="check">
                 <label for="ind">Indicatif</label>
-                <input class="champ" name="ind" checked type="checkbox" id="ind">
+                <input class="champ box" name="ind" checked type="checkbox" id="ind">
             </div>
             <div class="check">
                 <label for="zero">zero</label>
