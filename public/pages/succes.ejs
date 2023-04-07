@@ -5,14 +5,46 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200;300;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/succes.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
     <title>succe</title>
 </head>
 
 <body>
-    <a href="../cvs/numero.csv" download>
-        <button>telecharger</button>
-    </a>
+    <div class="btns">
+        <a href="../cvs/numero.csv" download>
+            <button class="down">Télécharger</button>
+        </a>
+        <button class="see">Voir la liste</button>
+    </div>
+    <p class="home"><a href="/">Créé d'autres numéros</a></p>
+    <div class="liste">
+        <div class="liste-content">
+            <div class="close see">
+                <i class="bi bi-x"></i>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>id</th>
+                        <th>Numéro</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% datas.forEach((item,i,ary) => { %>
+                        <tr>
+                            <td><%= i + 1 %></td>
+                            <td><%= item.numero %></td>
+                        </tr>
+                    <% }); %>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="../js/succes.js"></script>
 </body>
 
 </html>

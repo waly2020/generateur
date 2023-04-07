@@ -1,21 +1,28 @@
 const button = document.getElementById("button");
 const champ = document.querySelectorAll(".champ");
+const options = document.querySelectorAll(".value");
 const preview = document.querySelector(".preview");
-console.dir(champ[0])
+console.dir(options[0]);
 
+let indicatifs = [...options];
+console.log(indicatifs);
 let ind = true;
 let zero = true;
-let chif = "76";
+let chif = getRandom();
 let sep = " ";
 
-preview.innerHTML = `${ind ? "<span class='modif'>+241</span>" : ""}${ind ? sep : ""}${zero ? "0" : ""}${chif}${sep}93${sep}76${sep}21`;
+function getRandom (){
+    return indicatifs[Math.floor(Math.random() * indicatifs.length)].value;
+}
+
+preview.innerHTML = `${ind ? "+241" : ""}${ind ? sep : ""}${zero ? "0" : ""}${chif}${sep}78${sep}36${sep}23`;
 
 champ.forEach(inp => {
     inp.addEventListener("input", () => {
 
         switch (inp.name) {
             case "chif":
-                chif = inp.value;
+                chif = inp.value !== "alea" ? inp.value : getRandom();
                 break;
 
             case "sep":
@@ -28,7 +35,7 @@ champ.forEach(inp => {
                 zero = inp.checked;
                 break;
         }
-        preview.textContent = `${ind ? "+241" : ""}${ind ? sep : ""}${zero ? "0" : ""}${chif}${sep}93${sep}76${sep}21`;
+        preview.textContent = `${ind ? "+241" : ""}${ind ? sep : ""}${zero ? "0" : ""}${chif}${sep}78${sep}36${sep}23`;
 
     })
 })
