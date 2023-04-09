@@ -2,10 +2,8 @@ const button = document.getElementById("button");
 const champ = document.querySelectorAll(".champ");
 const options = document.querySelectorAll(".value");
 const preview = document.querySelector(".preview");
-console.dir(options[0]);
 
 let indicatifs = [...options];
-console.log(indicatifs);
 let ind = true;
 let zero = true;
 let chif = getRandom();
